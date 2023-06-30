@@ -2,6 +2,8 @@ import pjsua2  # Import the pjsua2 library
 import time
 import argparse
 
+ip = '127.0.0.1' #Put your PABX IP here
+
 def parse_arguments():
     # Create an argument parser
     parser = argparse.ArgumentParser()
@@ -10,12 +12,12 @@ def parse_arguments():
     args = parser.parse_args()
 
     if args.ramal_number is not None:
-        ramal = "sip:" + args.ramal_number + "@<IP>"  # Format the extension for the call
+        ramal = "sip:" + args.ramal_number + "@" + ip  # Format the extension for the call
     else:
         parser.error("The '--ramal' argument is required. Please specify the extension for the call.")
 
     if args.number is not None:
-        num = "sip:" + args.number + "@<IP>"  # Format the number to call
+        num = "sip:" + args.number + "@" + ip  # Format the number to call
     else:
         parser.error("The '--num' argument is required. Please specify the number to call.")
     
@@ -35,7 +37,7 @@ class Account(pjsua2.Account):
 def make_call(ramal, num):
     acfg = pjsua2.AccountConfig()
     acfg.idUri = num  # Set the identity URI for the account
-    acfg.regConfig.registrarUri = "sip:<IP>"  # Set the registrar URI for the account
+    acfg.regConfig.registrarUri = "sip" + ip  # Set the registrar URI for the account
 
     creds = pjsua2.AuthCredInfo("digest", "ccmsipline", "user", 0, "12345")  # Set authentication credentials
     acfg.sipConfig.authCreds.append(creds)
