@@ -11,7 +11,7 @@ To install the requirements, please refer to the [PJSUA2-High Level API Document
 ## Usage
 To use the script, follow the steps below:
 
-In call-script.py file, change the <IP> for your PABX IP.
+In the line 5 of the call-script.py file, change the IP for your PABX IP.
 
 Open a terminal or command prompt.
 
