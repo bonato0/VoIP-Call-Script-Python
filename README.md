@@ -22,7 +22,9 @@ python3 call-script.py --ramal <extension> --num <number>
 ```
 Replace <extension> with the extension for the call and <number> with the number to call.
 
-The script will initiate the VoIP call to the specified extension/number and wait for 15 seconds (adjustable in the code). After the call, it will print a message indicating that the call has ended.
+The script will initiate the VoIP call to the specified extension/number and will keep the call active for 300 seconds or until terminated (adjustable in the code). After the call, it will print a message indicating that the call has ended.
+
+This will creates an empty call with no audio. If necessary, it can be included directly in the PABX
 
 ## Command-line Arguments
 The script accepts the following command-line arguments:
