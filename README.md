@@ -5,6 +5,9 @@ This script utilizes the pjsua2 library to initiate a VoIP call using the PJSIP 
 Before running the script, make sure you have the following prerequisites:
 
 Python 3 installed on your system.
+
+[Pjsip 2.13 installed on your system](https://github.com/pjsip/pjproject/releases/tag/2.13)
+
 The pjsua2 library and its dependencies installed.
 To install the requirements, please refer to the [PJSUA2-High Level API Documentation](https://www.pjsip.org/docs/book-latest/html/intro_pjsua2.html#building-pjsua2).
 
@@ -48,3 +51,4 @@ main(): This function serves as the entry point of the script. It calls parse_ar
 For detailed documentation on the pjsua2 library and its classes, methods, and configuration options, please refer to the following resources:
 
 Official PJSUA2 Documentation: https://www.pjsip.org/docs/book-latest/html/
+GitHub PJSIP Project: https://github.com/pjsip/pjproject
