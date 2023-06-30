@@ -51,4 +51,5 @@ main(): This function serves as the entry point of the script. It calls parse_ar
 For detailed documentation on the pjsua2 library and its classes, methods, and configuration options, please refer to the following resources:
 
 Official PJSUA2 Documentation: https://www.pjsip.org/docs/book-latest/html/
+
 GitHub PJSIP Project: https://github.com/pjsip/pjproject
